@@ -1,0 +1,80 @@
+%% Commands for TeXCount
+%TC:macro \cite [option:text,text]
+%TC:macro \citep [option:text,text]
+%TC:macro \citet [option:text,text]
+%TC:envir table 0 1
+%TC:envir table* 0 1
+%TC:envir tabular [ignore] word
+%TC:envir displaymath 0 word
+%TC:envir math 0 word
+%TC:envir comment 0 0
+%%
+%%
+%% The first command in your LaTeX source must be the \documentclass command.
+\documentclass[sigconf ,nonacm]{acmart}
+
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+
+\begin{document}
+
+
+\title{Fake News Detection Methods}
+
+\author{Ruochen Kong}
+\email{ruochen.kong@emory.edu}
+\affiliation{%
+  \institution{Emory University}
+  \city{Atlanta}
+  \state{Georgia}
+  \country{USA}
+}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{Fake news, Social media, Data mining, Machine learning, Neural networks}
+\begin{abstract}
+Fake news has spread for years on social media as user engagement increases, which diminishes the credibility of real news, and is extremely harmful in the current condition with Covid-19. Although this topic remains novel, several research papers have already developed powerful models for detecting fake news. Their approaches varied significantly on the features, including the linguistic features, the contained figures, the user profiles, and the network of users. In this survey, I aim to compare these models with their accuracy, interpretability, utility, and time complexity. The result would improve future research on fake news detection and would assists researchers to extract features that could be more clearly distinguished. 
+\end{abstract}
+
+\maketitle
+\section{Introduction}
+Because of the threat of Covid-19, the demand for timely news has increased significantly. The most efficient way to obtain the news is to browse through social media. However, there exists numerous fake news. As noted in ``Inoculating Against Fake News About COVID-19'' (Sander van der Linden et al. 2020), about 50\% of the population has engaged in fake news and 25\% of Americans believe that vaccines are planted with microchips \cite{covid-fake}. The abundance of fake news diminishes the credibility of real news, which is extremely harmful in the current pandemic period. Therefore, a robust automatic fake news detection method is urgently demanded. Current research papers have provided possible features of fake news, including the content, the writing style, the resolution of the figure, the relevance of the figure, the location of the users, the age of the user, and the social network of the user.  These papers have investigated various features which are not fully listed here but will be discussed in the following sections. Notice that the current papers are generally based on the datasets that contain the fake news of the 2016 presidential election, so some important features in these models may not maintain the same importance on the Covid-19 datasets, but it is still cost-worthy to compare and summarize the exited models.
+
+\section{Problem Definition}
+The previous papers used different definitions of the fake news detection problem but shared some common variables. The following definition is a preliminary summarization of the previous definitions.
+
+Given the dataset $\mathcal{X}$, the label set $\mathbb{Y}$ is either collected along with the dataset or determined through several processes. The dataset $\mathcal{X}$ can also be separated into $\mathcal{X}^R$ and $\mathcal{X}^F$, where $R$ represents real news and $F$ represents fake news. The features $\mathcal{Z}$ may be extracted from $\mathcal{X}$ along with $\mathcal{Z}^R$ and $\mathcal{Z}^F$. Then the final goal is to develop a function $\mathcal{M}:\mathcal{Z} \to \mathbb{Y}$.
+
+The format of $\mathcal{X}$ and $\mathcal{Z}$ varies from matrix to graphs, which will be further explained when investigating actual models. The format of $\mathbb{Y}$ is also different based on the specific goals.
+
+\section{Methods}
+
+\subsection{FNDNet}
+FNDNet \cite{FNDNet} is a machine learning approach which extracted the features from the raw data by utilizeing an exist natural language processing method, GloVe \cite{glove}. GloVe calculates the clossness of two words in context and is storded as a matrix, $\mathcal{Z}$. $\mathcal{Z}$ is then passed through sevral steps of CNN and pooling, but lack of explanations. The authors provide an accuracy of 98\% of this model. This value, however, would be less believable due to the simultaneously high performance of the baselines, but it would also be because of the importance of GloVe.
+
+\subsection{TI-CNN}
+Different from FNDNet which considers only the text content, TI-CNN includes the text content, the metadata and the attached images \cite{yang2018ti}. According to the authors, the statistical features of words, sentences, and images are proved to distinguish from real news to fake news, which forms the dataset $\mathcal{X}$. Then $\mathcal{X}$ is passes through CNNs to form the training data $\mathcal{Z}$. Finally, the neural network $\mathcal{Z}$ is trained with back-propagation algorithm. In this paper, the importance of attached images is convincingly proved.
+
+\subsection{MMFD}
+Multi-source Muilti-class Fake News Detection (MMFD) \cite{MMFD} considered even more sources, for example the history of the user engaged in fake news. Additionally, this model used several output classes to represent the degree of fakeness instead of the binary separation. The challenge of this model is the way to combine the features from each source into a coherent dimension, and the method to reliably determine the degree of fakenees for the training dataset.
+
+\subsection{Network Based \& User Profiles}
+The previous papers considered mostly on the content of fake news, while the network based approach \cite{NetworkBased} and the user profiles approach \cite{UserProfile} provide another possibility. The features used in the netwoke based approach are carefully compared with each other by the authors which increase the interpretability. The user profiles approach, similarly, also shows the importance of several features. Both papers provide insight of further research.
+
+\subsection{Unsupervised Detection Model}
+Most of the existing models are supervied model, Yang et al. (2019) provied a possible unsupervised framework \cite{Unsupervised}. However, the framework is stated only with statistical equations which is less explainable in some aspects.
+
+\section{Challenges}
+The most common challenge is that, in general, the users who create fake news deliberately mix real news with artificial information to increase credibility. Thus, models would be blinded if only considering the content. To utilize broader sources such as social networks or user profiles would resolve this problem, but result in another challenge with the time complexity. Thus, creating an optimal balance between them woulg be the current goal.
+
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{ref}
+
+\end{document}

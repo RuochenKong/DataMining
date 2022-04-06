@@ -1,0 +1,142 @@
+\documentclass[11pt]{article}
+\usepackage{datetime}
+\usepackage{color,array,graphics}
+\usepackage{enumerate}
+\usepackage[pdftex, colorlinks, linkcolor=red,citecolor=red,urlcolor=blue]{hyperref}
+\usepackage{ulem}
+\usepackage[vlined,ruled,commentsnumbered,linesnumbered]{algorithm2e}
+
+\title{CS570 HW1 Report}
+\author{Ruochen Kong}
+
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.3cm plus4mm minus3mm}
+
+\textwidth  6.5in
+\oddsidemargin +0.0in
+\evensidemargin +0.0in
+\textheight 9.0in
+\topmargin -0.5in
+\linespread{1.4}
+
+\usepackage{upquote,textcomp}
+\usepackage{amssymb,amsmath,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs} 
+\usepackage{makecell, rotating}
+
+\newcommand{\vect}[1]{{\bf #1}}                 %for bold chars
+\newcommand{\vecg}[1]{\mbox{\boldmath $ #1 $}}  %for bold greek chars
+\newcommand{\matx}[1]{{\bf #1}}
+
+\def\OR{\vee}
+\def\AND{\wedge}
+\def\imp{\rightarrow}
+\def\math#1{$#1$}
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\N}{\mathbin}{AMSb}{"4E}
+\DeclareMathSymbol{\Z}{\mathbin}{AMSb}{"5A}
+\DeclareMathSymbol{\R}{\mathbin}{AMSb}{"52}
+\DeclareMathSymbol{\Q}{\mathbin}{AMSb}{"51}
+\DeclareMathSymbol{\I}{\mathbin}{AMSb}{"49}
+\DeclareMathSymbol{\C}{\mathbin}{AMSb}{"43}
+
+\usepackage{tikz}
+
+\begin{document}
+\maketitle
+
+\section{Explanations}
+
+\subsection{Frequent Patterns -- Step 4}
+
+In this step, I implemented the Apriori algorithm to find the frequent patterns. The `pattern.py' file contains the code for this step. During implementation, I first defined a list of sets {\it Data} to collect the set of single items of each line in a specific topic. Let use {\it topic 0} as the example, then the first few elements of {\it Data} would be: 
+
+\begin{center}
+\begin{tabular}{c|c}
+index & content\\
+\hline 
+0 & \{`0019', `0020'\}\\
+1 & \{`0095',`0096',`0056'\}\\
+2 & \{`0097',`0099',`0100'\}\\
+$\cdots$ & $\cdots$ \\
+\end{tabular}
+\end{center}
+
+
+Before loading the topic file, I also created a dictionary that uses the itemset as keys and their support numbers as values. During loading, I counted the support numbers of every single item, and after loading, I removed the ones with support numbers less than min support. The {\bf min support is fixed at 1\%} of the total lines of each topic.
+
+Then in each iteration of Apriori, I collected the remaining frequent patterns from the previous iteration and joined them with themselves to form the patterns that need to be checked in the current iteration. I checked each pattern with {\it Data} to count the support numbers and collect the ones with support numbers higher than the min support number. The iteration stopped when there is no remaining frequent pattern from the previous step. Finally, I output this dictionary to the txt file.\\
+\textit{\textbf{* Codes for this step are in the pattern.py file.}}
+
+\subsection{Maximal/Closed Patterns -- Step 5}
+
+These patterns are calculated from the output in step 4. For the {\bf closed pattern}, I read the pattern file into dictionaries with the support number as the keys and the set of patterns as the values. Then to check if a pattern is a closed pattern, it is only to compare with the ones in the same list with it. For example, some elements of the dictionary for {\it topic 3} would be:
+
+\begin{center}
+\begin{tabular}{c|c}
+keys & values\\
+\hline 
+$\cdots$ & $\cdots$ \\
+101 & [\{`0233'\}, \{`0676'\}, \{`0397'\}]\\
+100 & [\{`0368'\}, \{`0487'\}]\\
+99 & [\{`0206'\}]\\
+98 & [\{`1889'\}, \{`0105',`0129'\}, \{`0105',`0196'\}]\\
+$\cdots$ & $\cdots$ \\
+\end{tabular}
+\end{center}
+\textit{\textbf{* Codes for this step are in the closed.py file.}}\\
+
+For the {\bf max pattern}, I made a list of (pattern, support number) pairs as the result. When loading the pattern files, I checked whether the pattern is a supper pattern of one element of the result list. If it is a supper pattern, then change the (pattern, support number) pair with the super pattern with its support number; otherwise, add this pattern with its support number into the result list as a new element.\\
+\textit{\textbf{* Codes for this step are in the maxpattern.py file.}}
+
+\subsection{Purity -- Step 6}
+I first calculated the $D(t,t')$ for every possible $(t,t')$ pairs, and stored them into a $5\times5$ matrix $Dtt$ with $Dtt[t][t] = D(t)$ and $Dtt[t][t'] = D(t,t')$. Then I load the pattern files as a list of dictionaries $P$ with $P[i]$ represents the mining pattern of the $i$th topic. Each dictionary uses the patterns as the keys and their support number as the values. In this way, the $f(t,p)$ can be easily accessed through this list. For finding the $f(t',p)$, I loaded the topic files and counted the appearance of $p$. By the provided formula, I generated a dictionary of each topic with patterns as the key and their purity as the value. To combine the purity with the support number, I calculated a reranking value by:
+\begin{equation*}
+val = \text{support number} \times  e ^{ \text{purity}}
+\end{equation*}
+As the purity ranged from positive to negative, by this equation, all the resulted values will be positive and a pattern with negative purity but a large support number may have a chance to receive a higher rank than the one with positive purity but a small support number. Hence, in general, a pattern with a larger support number and higher purity will receive a higher rank.\\
+\textit{\textbf{* Codes for this step are in the purity.py file.}}
+
+\section{Questions}
+
+\subsection{Ponder A}
+
+I chose $min\_sup = 1\%$, because when I tried with $min\_sup = 2\%$, the number of frequent patterns is not enough for me to create an overview of the topic. With $1\%$, around 180 frequent patterns are extracted from each topic, which is the most suitable number for me.
+
+
+\subsection{Ponder B}
+
+By looking through the several pattern files, I think :\\
+	\hspace*{2em}{\it topic 0} Query Processing\\
+	\hspace*{2em}{\it topic 1} Natural Language Processing \\
+	\hspace*{2em}{\it topic 2} Data Mining\\
+	\hspace*{2em}{\it topic 3} Database System\\
+	\hspace*{2em}{\it topic 4} Algorithms\\
+For {\it topic 0}, most of its frequent patterns are about queries and efficiency, so I think this topic should be related to query processing models.\\
+For {\it topic 1}, it has `image', `detection', `semantic', so I think it should be NLP.\\
+For {\it topic 2}, it is quite clear than contains `data mining'\\
+For {\it topic 3}, similarly, it has `database' as a frequent pattern with a high rank.\\
+For {\it topic 4}, as the same condition, it has `algorithm' as its most frequent pattern.
+
+\subsection{Ponder C}
+
+Based on my results, the {\it closed-i.txt} is identical to the {\it pattern-i.txt} and most of the patterns contain only one term, so I think the terms are not likely to appear together in our dataset. The {\it max-i.txt} files successfully show some difference than the previous twos. When guessing the topic, I found it would be more helpful to look through the max files instead of the patterns. This feeling is probably because the max files removed the single term patterns that have supper patterns and then enhanced the understandability. Thus, I think the max patterns are satisfied to determine the topics, while the closed and patterns are not.
+
+
+
+\section{Sources}
+{\bf LDA} for preprocessing.\\
+{\bf os} to create the directories in step 4 to 6.\\
+{\bf math} to calculate the 2 based log for the purity in setp 6.\\
+Other structures including sets and dictionaries are self-contained in Python. \\
+Note, several files may be started with `from closed import *'. These files are importing functions from my own file, `closed.py'.
+
+
+\end{document}

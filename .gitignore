@@ -1,0 +1,7 @@
+/acmart-primary/
+/note
+/project/data
+*.aux
+*.log
+*.gz
+*.out

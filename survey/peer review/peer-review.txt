@@ -1,0 +1,115 @@
+Survey # 1
+
+Do the abstract and introduction give a clear overview of the survey (topic to be surveyed, motivation of the survey, problem formulation, survey outline, findings)? (rate 1-5) 4
+
+
+Are the backgrounds and challenges clearly explained? (rate 1-5) 5
+
+
+Is the categorization of existing methods systematic and convincing? (rate 1-5) 5
+
+
+Are the detailed descriptions of existing methods comprehensive and easy-to-understand? (rate 1-5) 4
+
+
+Are the discussions about future directions interesting and insightful? (rate 1-5) 4
+
+
+Detailed Comments:
+The topic is interesting and the content is easy to understand, but I think the motivation to do this survey is not clearly explained. I also expect a more detailed description of the existing models and the possible outcomes, as well as a more convincing future direction.
+
+
+-----------------------------------------------------------------------------------
+
+Survey # 2
+
+Do the abstract and introduction give a clear overview of the survey (topic to be surveyed, motivation of the survey, problem formulation, survey outline, findings)? (rate 1-5) 5
+
+
+Are the backgrounds and challenges clearly explained? (rate 1-5) 5
+
+
+Is the categorization of existing methods systematic and convincing? (rate 1-5) 5
+
+
+Are the detailed descriptions of existing methods comprehensive and easy-to-understand? (rate 1-5) 4
+
+
+Are the discussions about future directions interesting and insightful? (rate 1-5) 5
+
+
+Detailed Comments:
+The methods are well-categorized with careful discussions, but I feel like some variables in the equations are lack explanations.
+
+
+-----------------------------------------------------------------------------------
+
+Survey # 3
+
+Do the abstract and introduction give a clear overview of the survey (topic to be surveyed, motivation of the survey, problem formulation, survey outline, findings)? (rate 1-5) 4
+
+
+Are the backgrounds and challenges clearly explained? (rate 1-5) 5
+
+
+Is the categorization of existing methods systematic and convincing? (rate 1-5) 5
+
+
+Are the detailed descriptions of existing methods comprehensive and easy-to-understand? (rate 1-5) 3
+
+
+Are the discussions about future directions interesting and insightful? (rate 1-5) 4
+
+
+Detailed Comments:
+
+The abstract section is too detailed, meaning some of this part should belong to the introduction or background. The formulas are hard to understand and miss consistency when explaining the probabilistic model. The format of this survey also is strange to me. Specifically, the unbold font on section names and the missing serial numbers increase the reading difficulty. The word choice in this survey is too informal. Also, some concepts should come with references.
+
+-----------------------------------------------------------------------------------
+
+Survey # 4
+
+Do the abstract and introduction give a clear overview of the survey (topic to be surveyed, motivation of the survey, problem formulation, survey outline, findings)? (rate 1-5) 5
+
+
+Are the backgrounds and challenges clearly explained? (rate 1-5) 5
+
+
+Is the categorization of existing methods systematic and convincing? (rate 1-5) 4
+
+
+Are the detailed descriptions of existing methods comprehensive and easy-to-understand? (rate 1-5) 5
+
+
+Are the discussions about future directions interesting and insightful? (rate 1-5) 5
+
+
+Detailed Comments:
+
+The current problem in clustering is clearly explained. Methods are provided with detailed formulas, but I feel like section 5 can be better organized. Hence, lots of typos appear, which should be more careful.
+
+
+-----------------------------------------------------------------------------------
+
+Survey # 5
+
+Do the abstract and introduction give a clear overview of the survey (topic to be surveyed, motivation of the survey, problem formulation, survey outline, findings)? (rate 1-5) 5
+
+
+Are the backgrounds and challenges clearly explained? (rate 1-5) 5
+
+
+Is the categorization of existing methods systematic and convincing? (rate 1-5) 4
+
+
+Are the detailed descriptions of existing methods comprehensive and easy-to-understand? (rate 1-5) 4
+
+
+Are the discussions about future directions interesting and insightful? (rate 1-5) 5
+
+
+Detailed Comments:
+
+Provide a convincing reason to write this new survey. I feel like when explaining the models with equations, a summary of notations would be helpful for understanding. Hence, the models may be better organized.
+
+-----------------------------------------------------------------------------------

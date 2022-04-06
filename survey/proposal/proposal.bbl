@@ -1,0 +1,148 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{8}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Kaliyar et~al\mbox{.}(2020)]%
+        {FNDNet}
+\bibfield{author}{\bibinfo{person}{Rohit~Kumar Kaliyar},
+  \bibinfo{person}{Anurag Goswami}, \bibinfo{person}{Pratik Narang}, {and}
+  \bibinfo{person}{Soumendu Sinha}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{FNDNet – A deep convolutional neural network for
+  fake news detection}.
+\newblock \bibinfo{journal}{\emph{Cognitive Systems Research}}
+  \bibinfo{volume}{61} (\bibinfo{year}{2020}), \bibinfo{pages}{32--44}.
+\newblock
+\showISSN{1389-0417}
+\urldef\tempurl%
+\url{https://doi.org/10.1016/j.cogsys.2019.12.005}
+\showDOI{\tempurl}
+
+
+\bibitem[Karimi et~al\mbox{.}(2018)]%
+        {MMFD}
+\bibfield{author}{\bibinfo{person}{Hamid Karimi}, \bibinfo{person}{Proteek
+  Roy}, \bibinfo{person}{Sari Saba-Sadiya}, {and} \bibinfo{person}{Jiliang
+  Tang}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Multi-source multi-class fake news detection}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 27th international conference on
+  computational linguistics}}. \bibinfo{pages}{1546--1557}.
+\newblock
+
+
+\bibitem[Pennington et~al\mbox{.}(2014)]%
+        {glove}
+\bibfield{author}{\bibinfo{person}{Jeffrey Pennington},
+  \bibinfo{person}{Richard Socher}, {and} \bibinfo{person}{Christopher
+  Manning}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{{G}lo{V}e: Global Vectors for Word Representation}.
+  In \bibinfo{booktitle}{\emph{Proceedings of the 2014 Conference on Empirical
+  Methods in Natural Language Processing ({EMNLP})}}.
+  \bibinfo{publisher}{Association for Computational Linguistics},
+  \bibinfo{address}{Doha, Qatar}, \bibinfo{pages}{1532--1543}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.3115/v1/D14-1162}
+\showDOI{\tempurl}
+
+
+\bibitem[Shu et~al\mbox{.}(2019)]%
+        {UserProfile}
+\bibfield{author}{\bibinfo{person}{Kai Shu}, \bibinfo{person}{Xinyi Zhou},
+  \bibinfo{person}{Suhang Wang}, \bibinfo{person}{Reza Zafarani}, {and}
+  \bibinfo{person}{Huan Liu}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{The role of user profiles for fake news detection}.
+  In \bibinfo{booktitle}{\emph{Proceedings of the 2019 IEEE/ACM international
+  conference on advances in social networks analysis and mining}}.
+  \bibinfo{pages}{436--439}.
+\newblock
+
+
+\bibitem[van~der Linden et~al\mbox{.}(2020)]%
+        {covid-fake}
+\bibfield{author}{\bibinfo{person}{Sander van~der Linden}, \bibinfo{person}{Jon
+  Roozenbeek}, {and} \bibinfo{person}{Josh Compton}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Inoculating Against Fake News About COVID-19}.
+\newblock \bibinfo{journal}{\emph{Frontiers in Psychology}}
+  \bibinfo{volume}{11} (\bibinfo{year}{2020}).
+\newblock
+\showISSN{1664-1078}
+\urldef\tempurl%
+\url{https://doi.org/10.3389/fpsyg.2020.566790}
+\showDOI{\tempurl}
+
+
+\bibitem[Yang et~al\mbox{.}(2019)]%
+        {Unsupervised}
+\bibfield{author}{\bibinfo{person}{Shuo Yang}, \bibinfo{person}{Kai Shu},
+  \bibinfo{person}{Suhang Wang}, \bibinfo{person}{Renjie Gu},
+  \bibinfo{person}{Fan Wu}, {and} \bibinfo{person}{Huan Liu}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Unsupervised fake news detection on social media: A
+  generative approach}. In \bibinfo{booktitle}{\emph{Proceedings of the AAAI
+  conference on artificial intelligence}}, Vol.~\bibinfo{volume}{33}.
+  \bibinfo{pages}{5644--5651}.
+\newblock
+
+
+\bibitem[Yang et~al\mbox{.}(2018)]%
+        {yang2018ti}
+\bibfield{author}{\bibinfo{person}{Yang Yang}, \bibinfo{person}{Lei Zheng},
+  \bibinfo{person}{Jiawei Zhang}, \bibinfo{person}{Qingcai Cui},
+  \bibinfo{person}{Zhoujun Li}, {and} \bibinfo{person}{Philip~S Yu}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{TI-CNN: Convolutional neural networks for fake news
+  detection}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1806.00749}}
+  (\bibinfo{year}{2018}).
+\newblock
+
+
+\bibitem[Zhou and Zafarani(2019)]%
+        {NetworkBased}
+\bibfield{author}{\bibinfo{person}{Xinyi Zhou} {and} \bibinfo{person}{Reza
+  Zafarani}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Network-based fake news detection: A pattern-driven
+  approach}.
+\newblock \bibinfo{journal}{\emph{ACM SIGKDD explorations newsletter}}
+  \bibinfo{volume}{21}, \bibinfo{number}{2} (\bibinfo{year}{2019}),
+  \bibinfo{pages}{48--60}.
+\newblock
+
+
+\end{thebibliography}
