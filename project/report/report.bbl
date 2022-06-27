@@ -1,0 +1,265 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{18}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Choi et~al\mbox{.}(2017)]%
+        {crnn}
+\bibfield{author}{\bibinfo{person}{Keunwoo Choi}, \bibinfo{person}{Gy{\"o}rgy
+  Fazekas}, \bibinfo{person}{Mark Sandler}, {and} \bibinfo{person}{Kyunghyun
+  Cho}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Convolutional recurrent neural networks for music
+  classification}. In \bibinfo{booktitle}{\emph{2017 IEEE International
+  Conference on Acoustics, Speech and Signal Processing (ICASSP)}}. IEEE,
+  \bibinfo{pages}{2392--2396}.
+\newblock
+
+
+\bibitem[Dieleman et~al\mbox{.}(2011)]%
+        {dieleman2011audio}
+\bibfield{author}{\bibinfo{person}{Sander Dieleman},
+  \bibinfo{person}{Phil{\'e}mon Brakel}, {and} \bibinfo{person}{Benjamin
+  Schrauwen}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Audio-based music classification with a pretrained
+  convolutional network}. In \bibinfo{booktitle}{\emph{12th International
+  Society for Music Information Retrieval Conference (ISMIR-2011)}}. University
+  of Miami, \bibinfo{pages}{669--674}.
+\newblock
+
+
+\bibitem[Dieleman and Schrauwen(2014)]%
+        {endtoend}
+\bibfield{author}{\bibinfo{person}{Sander Dieleman} {and}
+  \bibinfo{person}{Benjamin Schrauwen}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{End-to-end learning for music audio}. In
+  \bibinfo{booktitle}{\emph{2014 IEEE International Conference on Acoustics,
+  Speech and Signal Processing (ICASSP)}}. IEEE, \bibinfo{pages}{6964--6968}.
+\newblock
+
+
+\bibitem[Feng(2014)]%
+        {feng2014deep}
+\bibfield{author}{\bibinfo{person}{Tao Feng}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Deep learning for music genre classification}.
+\newblock \bibinfo{journal}{\emph{private document}} (\bibinfo{year}{2014}).
+\newblock
+
+
+\bibitem[Fu et~al\mbox{.}(2010a)]%
+        {fu2010feature}
+\bibfield{author}{\bibinfo{person}{Zhouyu Fu}, \bibinfo{person}{Guojun Lu},
+  \bibinfo{person}{Kai-Ming Ting}, {and} \bibinfo{person}{Dengsheng Zhang}.}
+  \bibinfo{year}{2010}\natexlab{a}.
+\newblock \showarticletitle{On feature combination for music classification}.
+  In \bibinfo{booktitle}{\emph{Joint IAPR International Workshops on
+  Statistical Techniques in Pattern Recognition (SPR) and Structural and
+  Syntactic Pattern Recognition (SSPR)}}. Springer, \bibinfo{pages}{453--462}.
+\newblock
+
+
+\bibitem[Fu et~al\mbox{.}(2010b)]%
+        {fu2010survey}
+\bibfield{author}{\bibinfo{person}{Zhouyu Fu}, \bibinfo{person}{Guojun Lu},
+  \bibinfo{person}{Kai~Ming Ting}, {and} \bibinfo{person}{Dengsheng Zhang}.}
+  \bibinfo{year}{2010}\natexlab{b}.
+\newblock \showarticletitle{A survey of audio-based music classification and
+  annotation}.
+\newblock \bibinfo{journal}{\emph{IEEE transactions on multimedia}}
+  \bibinfo{volume}{13}, \bibinfo{number}{2} (\bibinfo{year}{2010}),
+  \bibinfo{pages}{303--319}.
+\newblock
+
+
+\bibitem[Lee et~al\mbox{.}(2009)]%
+        {lee2009automatic}
+\bibfield{author}{\bibinfo{person}{Chang-Hsing Lee}, \bibinfo{person}{Jau-Ling
+  Shih}, \bibinfo{person}{Kun-Ming Yu}, {and} \bibinfo{person}{Hwai-San Lin}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Automatic music genre classification based on
+  modulation spectral analysis of spectral and cepstral features}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Multimedia}}
+  \bibinfo{volume}{11}, \bibinfo{number}{4} (\bibinfo{year}{2009}),
+  \bibinfo{pages}{670--682}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2010)]%
+        {li2010automatic}
+\bibfield{author}{\bibinfo{person}{TL Li}, \bibinfo{person}{Antoni~B Chan},
+  {and} \bibinfo{person}{AH Chun}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Automatic musical pattern feature extraction using
+  convolutional neural network}.
+\newblock \bibinfo{journal}{\emph{Genre}} \bibinfo{volume}{10},
+  \bibinfo{number}{2010} (\bibinfo{year}{2010}), \bibinfo{pages}{1x1}.
+\newblock
+
+
+\bibitem[McFee et~al\mbox{.}(2022)]%
+        {brian_mcfee_2022_6097378}
+\bibfield{author}{\bibinfo{person}{Brian McFee}, \bibinfo{person}{Alexandros
+  Metsai}, \bibinfo{person}{Matt McVicar}, \bibinfo{person}{Stefan Balke},
+  \bibinfo{person}{Carl Thomé}, \bibinfo{person}{Colin Raffel},
+  \bibinfo{person}{Frank Zalkow}, \bibinfo{person}{Ayoub Malek},
+  \bibinfo{person}{Dana}, \bibinfo{person}{Kyungyun Lee},
+  \bibinfo{person}{Oriol Nieto}, \bibinfo{person}{Dan Ellis},
+  \bibinfo{person}{Jack Mason}, \bibinfo{person}{Eric Battenberg},
+  \bibinfo{person}{Scott Seyfarth}, \bibinfo{person}{Ryuichi Yamamoto},
+  \bibinfo{person}{viktorandreevichmorozov}, \bibinfo{person}{Keunwoo Choi},
+  \bibinfo{person}{Josh Moore}, \bibinfo{person}{Rachel Bittner},
+  \bibinfo{person}{Shunsuke Hidaka}, \bibinfo{person}{Ziyao Wei},
+  \bibinfo{person}{nullmightybofo}, \bibinfo{person}{Adam Weiss},
+  \bibinfo{person}{Darío Hereñú}, \bibinfo{person}{Fabian-Robert Stöter},
+  \bibinfo{person}{Pius Friesch}, \bibinfo{person}{Matt Vollrath},
+  \bibinfo{person}{Taewoon Kim}, {and} \bibinfo{person}{Thassilo}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{librosa/librosa: 0.9.1}}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.5281/zenodo.6097378}
+\showDOI{\tempurl}
+
+
+\bibitem[Muller et~al\mbox{.}(2011)]%
+        {muller2011signal}
+\bibfield{author}{\bibinfo{person}{Meinard Muller}, \bibinfo{person}{Daniel~PW
+  Ellis}, \bibinfo{person}{Anssi Klapuri}, {and} \bibinfo{person}{Ga{\"e}l
+  Richard}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Signal processing for music analysis}.
+\newblock \bibinfo{journal}{\emph{IEEE Journal of selected topics in signal
+  processing}} \bibinfo{volume}{5}, \bibinfo{number}{6} (\bibinfo{year}{2011}),
+  \bibinfo{pages}{1088--1110}.
+\newblock
+
+
+\bibitem[Panagakis et~al\mbox{.}(2009)]%
+        {panagakis2009music}
+\bibfield{author}{\bibinfo{person}{Yannis Panagakis},
+  \bibinfo{person}{Constantine Kotropoulos}, {and} \bibinfo{person}{Gonzalo~R
+  Arce}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Music Genre Classification Using Locality
+  Preserving Non-Negative Tensor Factorization and Sparse Representations.}. In
+  \bibinfo{booktitle}{\emph{ISMIR}}. Citeseer, \bibinfo{pages}{249--254}.
+\newblock
+
+
+\bibitem[Peeters(2004)]%
+        {peeters2004large}
+\bibfield{author}{\bibinfo{person}{Geoffroy Peeters}.}
+  \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{A large set of audio features for sound description
+  (similarity and classification) in the CUIDADO project}.
+\newblock \bibinfo{journal}{\emph{CUIDADO Ist Project Report}}
+  \bibinfo{volume}{54}, \bibinfo{number}{0} (\bibinfo{year}{2004}),
+  \bibinfo{pages}{1--25}.
+\newblock
+
+
+\bibitem[Sigtia and Dixon(2014)]%
+        {sigtia2014improved}
+\bibfield{author}{\bibinfo{person}{Siddharth Sigtia} {and}
+  \bibinfo{person}{Simon Dixon}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Improved music feature learning with deep neural
+  networks}. In \bibinfo{booktitle}{\emph{2014 IEEE international conference on
+  acoustics, speech and signal processing (ICASSP)}}. IEEE,
+  \bibinfo{pages}{6959--6963}.
+\newblock
+
+
+\bibitem[Tamatjita and Mahastama(2016)]%
+        {comparison}
+\bibfield{author}{\bibinfo{person}{Elizabeth~Nurmiyati Tamatjita} {and}
+  \bibinfo{person}{Aditya~Wikan Mahastama}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Comparison of music genre classification using
+  Nearest Centroid Classifier and k-Nearest Neighbours}. In
+  \bibinfo{booktitle}{\emph{2016 International Conference on Information
+  Management and Technology (ICIMTech)}}. \bibinfo{pages}{118--123}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICIMTech.2016.7930314}
+\showDOI{\tempurl}
+
+
+\bibitem[Tolonen and Karjalainen(2000)]%
+        {tolonen2000computationally}
+\bibfield{author}{\bibinfo{person}{Tero Tolonen} {and} \bibinfo{person}{Matti
+  Karjalainen}.} \bibinfo{year}{2000}\natexlab{}.
+\newblock \showarticletitle{A computationally efficient multipitch analysis
+  model}.
+\newblock \bibinfo{journal}{\emph{IEEE transactions on speech and audio
+  processing}} \bibinfo{volume}{8}, \bibinfo{number}{6} (\bibinfo{year}{2000}),
+  \bibinfo{pages}{708--716}.
+\newblock
+
+
+\bibitem[Tzanetakis and Cook(2002)]%
+        {gtzan}
+\bibfield{author}{\bibinfo{person}{G. Tzanetakis} {and} \bibinfo{person}{P.
+  Cook}.} \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{Musical genre classification of audio signals}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Speech and Audio
+  Processing}} \bibinfo{volume}{10}, \bibinfo{number}{5}
+  (\bibinfo{year}{2002}), \bibinfo{pages}{293--302}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/TSA.2002.800560}
+\showDOI{\tempurl}
+
+
+\bibitem[Valero and Alias(2012)]%
+        {valero2012gammatone}
+\bibfield{author}{\bibinfo{person}{Xavier Valero} {and}
+  \bibinfo{person}{Francesc Alias}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Gammatone cepstral coefficients: Biologically
+  inspired features for non-speech audio classification}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Multimedia}}
+  \bibinfo{volume}{14}, \bibinfo{number}{6} (\bibinfo{year}{2012}),
+  \bibinfo{pages}{1684--1689}.
+\newblock
+
+
+\bibitem[Yu and Liu(2003)]%
+        {yu2003feature}
+\bibfield{author}{\bibinfo{person}{Lei Yu} {and} \bibinfo{person}{Huan Liu}.}
+  \bibinfo{year}{2003}\natexlab{}.
+\newblock \showarticletitle{Feature selection for high-dimensional data: A fast
+  correlation-based filter solution}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 20th international conference on machine learning (ICML-03)}}.
+  \bibinfo{pages}{856--863}.
+\newblock
+
+
+\end{thebibliography}
